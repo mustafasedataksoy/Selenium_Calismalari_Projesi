@@ -1,6 +1,7 @@
 package Gun01;
 
 
+import Utulity.MyFunction;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,8 +14,11 @@ public class MainApp {
                driver.get("https://www.techno.study/");
                driver.manage().window().maximize();
 
-
+               MyFunction.Bekle(5);
                driver.quit();
+
+
+
 
 
 
