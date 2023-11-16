@@ -22,6 +22,8 @@ public class FindingByLinkText {
         System.out.println("link.getAttribute(rel) = " + link.getAttribute("rel"));
 
 
+
+
         MyFunction.Bekle(10);
         driver.quit();
 

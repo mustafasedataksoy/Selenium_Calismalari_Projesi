@@ -14,6 +14,7 @@ public class BaseDriver {
     public static WebDriver driver;
 
     static{
+        KalanOncekileriKapat();
 
 //        Logger logger = Logger.getLogger("");
 //        logger.setLevel(Level.SEVERE); // Sadece Errorları göster
@@ -29,8 +30,17 @@ public class BaseDriver {
 
         driver.manage().timeouts().implicitlyWait(dr);
 
+    }
 
 
+
+    public static void KalanOncekileriKapat()
+    {
+        try{
+            Runtime.getRuntime().exec("taskkill /F /M chromedriver.exe /T");
+        }catch (Exception ex){
+
+    }
     }
 
     public static void driverBekleKapat()
@@ -39,4 +49,8 @@ public class BaseDriver {
         driver.quit();
 
     }
+
+
+
+
 }
