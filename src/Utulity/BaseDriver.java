@@ -1,6 +1,7 @@
 package Utulity;
 
 
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -22,8 +23,13 @@ public class BaseDriver {
 
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
+       // driver.manage().window().setPosition(new Point(-1650,130));
+
+
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
+
+
 
         Duration dr=Duration.ofSeconds(30);
         driver.manage().timeouts().pageLoadTimeout(dr);
@@ -45,7 +51,7 @@ public class BaseDriver {
 
     public static void driverBekleKapat()
     {
-        MyFunction.Bekle(10);
+        MyFunction.Bekle(3);
         driver.quit();
 
     }

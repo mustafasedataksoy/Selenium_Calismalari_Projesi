@@ -1,6 +1,7 @@
 package Gun03;
 
 import Utulity.BaseDriver;
+import Utulity.MyFunction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -11,20 +12,38 @@ public class Senaryo extends BaseDriver {
         driver.get("https://formsmarts.com/form/yu?mode=h5");
 
 
-        WebElement business=driver.findElement(By.cssSelector("[for='u_Wuo_4586_0'] >input"));
+        MyFunction.Bekle(2);
+        WebElement business=driver.findElement(By.cssSelector("input[type='radio'][value='Business']"));
         business.click();
 
-        WebElement selectOption= driver.findElement(By.cssSelector("#u_Wuo_4588 >*:nth-child(4) "));
+
+        MyFunction.Bekle(2);
+        WebElement selectOption= driver.findElement(By.cssSelector("select[id$='_4588']"));
         selectOption.click();
 
-        WebElement Everyday=driver.findElement(By.cssSelector("[for='u_Wuo_89585_0'] >input"));
+        MyFunction.Bekle(2);
+        WebElement options=driver.findElement(By.cssSelector("option[value='Online Advertising']"));
+        options.click();
+
+
+        MyFunction.Bekle(2);
+        WebElement Everyday=driver.findElement(By.cssSelector("[type='radio'][value='Every Day']"));
         Everyday.click();
 
-        WebElement Good = driver.findElement(By.cssSelector("#u_Wuo_4589_lbl +label > input"));
+        MyFunction.Bekle(2);
+        WebElement Good = driver.findElement(By.cssSelector("[type='radio'][value='Good']"));
         Good.click();
 
-        WebElement selectOption2=driver.findElement(By.cssSelector("#u_Wuo_4597 >*:nth-child(4)"));
-        selectOption2.click();
+        MyFunction.Bekle(2);
+        WebElement selectoption2=driver.findElement(By.cssSelector("select[id$='_4597']"));
+        selectoption2.click();
+
+        MyFunction.Bekle(2);
+        WebElement options2=driver.findElement(By.cssSelector("select[id$='_4597'] > :nth-child(4)"));
+        options2.click();
+
+        Good.click();
+
 
 
         driverBekleKapat();
