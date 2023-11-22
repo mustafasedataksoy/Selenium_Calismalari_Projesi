@@ -25,16 +25,13 @@ public class BaseDriver {
         driver = new ChromeDriver();
        // driver.manage().window().setPosition(new Point(-1650,130));
 
-
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-
-
 
         Duration dr=Duration.ofSeconds(30);
         driver.manage().timeouts().pageLoadTimeout(dr);
 
-        driver.manage().timeouts().implicitlyWait(dr);
+       driver.manage().timeouts().implicitlyWait(dr);
 
     }
 
